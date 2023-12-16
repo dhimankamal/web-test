@@ -1,11 +1,11 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google"
+import { Mulish } from "next/font/google";
 
-export const fontSans = FontSans({
+export const fontSans = Mulish({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
-export const fontMono = FontMono({
+export const fontMono = Mulish({
   subsets: ["latin"],
   variable: "--font-mono",
-})
+});
