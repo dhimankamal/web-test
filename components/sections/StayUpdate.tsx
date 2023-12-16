@@ -20,7 +20,11 @@ const list = [
 export default function StayUpdate () {
   return (
     <section className='py-10'>
-      <SectionHeader />
+      <SectionHeader
+        heading='Stay Update With Us'
+        subheading='Discover your world of Jewellery.'
+        buttonText='Discover all'
+      />
       <div className='flex gap-4 container mx-auto py-10'>
         {list.map(({ name }, idx) => {
           return (

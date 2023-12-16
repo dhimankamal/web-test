@@ -39,7 +39,7 @@ const collections = [
 export default function ShopByCategory () {
   return (
     <section>
-      <SectionHeader />
+      <SectionHeader heading='Shop By Category' subheading='Discover your world of Jewellery.' buttonText='Discover all' />
       <div className='container mx-auto px-8 py-12'>
         <div className='grid grid-cols-4 gap-6'>
           {collections.map(({ image }, idx) => {

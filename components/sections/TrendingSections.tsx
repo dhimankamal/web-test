@@ -23,7 +23,7 @@ let productList = [
 export default function TrendingSections () {
   return (
     <section>
-      <SectionHeader />
+      <SectionHeader heading='Trending Products' subheading='Discover your world of Jewellery.' buttonText='Discover all' />
       <div className='container mx-auto px-8 py-12'>
         <div className='grid grid-cols-5 gap-6'>
           {productList.map(({ name }, idx) => {

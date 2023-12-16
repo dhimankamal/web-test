@@ -41,7 +41,7 @@ export default function CustomerReviews () {
   }
   return (
     <section className='py-10'>
-      <SectionHeader />
+      <SectionHeader heading='Customer Reviews' subheading='Know what others think.' buttonText='View all'/>
       <div className='w-full overflow-hidden'>
         <Slider {...settings}>
           {list.map(({ name }, idx) => {

@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import SectionHeader from '../SectionHeader'
 import Image from 'next/image'
@@ -38,7 +40,12 @@ const collections = [
 export default function CollectionsSection () {
   return (
     <section>
-      <SectionHeader />
+      <SectionHeader
+        heading='Collections'
+        subheading='Discover your world of Jewellery.'
+        onClick={() => console.log('CollectionsSection')}
+        buttonText='Discover all'
+      />
       <div className='container mx-auto px-8 py-12'>
         <div className='grid grid-cols-3 gap-6'>
           {collections.map(({ image }, idx) => {
