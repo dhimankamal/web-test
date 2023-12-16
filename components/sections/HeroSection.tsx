@@ -1,17 +1,49 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
+import Slider, { Settings } from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
-export default function HeroSection() {
+const list = [
+  {
+    image: '/herobg.png'
+  },
+  {
+    image: '/herobg.png'
+  },
+  {
+    image: '/herobg.png'
+  }
+]
+
+export default function HeroSection () {
+  const settings: Settings = {
+    className: 'center',
+    infinite: true,
+    centerPadding: '0px',
+    slidesToShow: 1,
+    speed: 500,
+    autoplay: true,
+    dots: true
+  }
   return (
-<section>
-        <div className='relative w-full h-[40rem]'>
-          <Image
-            src='/herobg.png'
-            className='object-cover object-center'
-            layout='fill'
-            alt='herobg'
-          />
-        </div>
-      </section>
+    <section className='w-full overflow-hidden'>
+      <Slider {...settings}>
+        {list.map(({ image }, idx) => {
+          return (
+            <div key={idx} className='relative w-full h-[40rem]'>
+              <Image
+                src={image}
+                className='object-cover object-center'
+                layout='fill'
+                alt='herobg'
+              />
+            </div>
+          )
+        })}
+      </Slider>
+    </section>
   )
 }

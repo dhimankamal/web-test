@@ -55,7 +55,7 @@ const list = [
 
 export default function CategorySection () {
   return (
-    <section className='mx-auto container px-2 py-6'>
+    <section className='mx-auto container px-2 py-10'>
       <ul className='flex gap-4 w-full overflow-hidden'>
         {list.map(({ name }, idx) => {
           return (
