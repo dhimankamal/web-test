@@ -18,10 +18,14 @@ module.exports = {
         grey:{
           1:"#413E3E",
           2:"#807F7F",
-          3:"#D9D9D9"
+          3:"#D9D9D9",
+          4:"#F8F8F8"
         },
         purple:{
           1:"#531CC6"
+        },
+        green:{
+          1:"#16A06F"
         }
       }
     },
