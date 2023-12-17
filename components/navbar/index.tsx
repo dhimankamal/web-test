@@ -109,67 +109,74 @@ export const Navbar = () => {
   );
 
   return (
-    <nav>
-      <div className='bg-orange-1'>
-        <div className='container mx-auto flex items-center justify-between px-4 py-8'>
-          <div className=''>
-            <div className='max-w-fit gap-3'>
-              <NextLink
-                className='flex items-center justify-start gap-1'
-                href='/'
-              >
-                <Logo />
-                <p className='font-bold text-inherit'>GARNET LANEE</p>
-              </NextLink>
+    <>
+      {/* desktop nav */}
+      <nav className='hidden lg:block'>
+        <div className='bg-orange-1'>
+          <div className='container mx-auto flex items-center justify-between px-4 py-8'>
+            <div className=''>
+              <div className='max-w-fit gap-3'>
+                <NextLink
+                  className='flex items-center justify-start gap-1'
+                  href='/'
+                >
+                  <Logo />
+                  <p className='font-bold text-inherit'>GARNET LANEE</p>
+                </NextLink>
+              </div>
             </div>
-          </div>
 
-          <div>
-            <div>{searchInput}</div>
-          </div>
-          <div>
-            <ul className='flex items-center '>
-              {list.map(({ name, hrefs, icon }, idx) => {
-                return (
-                  <li key={idx} className='border-r-2 px-4 last:border-none'>
-                    <Link
-                      href='/'
-                      className='flex flex-col items-center gap-2 whitespace-nowrap'
-                    >
-                      {icon && React.createElement(icon)}
-                      <p className='text-sm '>{name}</p>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div>
-            <div className='flex items-start gap-2 border-b-3 border-orange px-2 pb-2'>
-              <div className='h-6 w-6 rounded-full border-2 border-gray-300 bg-white'></div>
-              <p>Hi, Ashish Sood</p>
+            <div>
+              <div>{searchInput}</div>
+            </div>
+            <div>
+              <ul className='flex items-center '>
+                {list.map(({ name, hrefs, icon }, idx) => {
+                  return (
+                    <li key={idx} className='border-r-2 px-4 last:border-none'>
+                      <Link
+                        href='/'
+                        className='flex flex-col items-center gap-2 whitespace-nowrap'
+                      >
+                        {icon && React.createElement(icon)}
+                        <p className='text-sm '>{name}</p>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div>
+              <div className='flex items-start gap-2 border-b-3 border-orange px-2 pb-2'>
+                <div className='h-6 w-6 rounded-full border-2 border-gray-300 bg-white'></div>
+                <p>Hi, Ashish Sood</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className='container mx-auto px-2'>
-        <ul className='flex'>
-          {links.map(({ name, hrefs }, idx) => {
-            return (
-              <li key={idx} className='w-full'>
-                <Link
-                  href={hrefs}
-                  className='flex flex-col items-center gap-2 whitespace-nowrap py-4'
-                >
-                  <p className='text-sm font-semibold transition-all duration-300 hover:text-orange'>
-                    {name}
-                  </p>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </nav>
+        <div className='container mx-auto px-2'>
+          <ul className='flex'>
+            {links.map(({ name, hrefs }, idx) => {
+              return (
+                <li key={idx} className='w-full'>
+                  <Link
+                    href={hrefs}
+                    className='flex flex-col items-center gap-2 whitespace-nowrap py-4'
+                  >
+                    <p className='text-sm font-semibold transition-all duration-300 hover:text-orange'>
+                      {name}
+                    </p>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </nav>
+      {/* mobile nav */}
+      {/* <nav className='w-full h-20 bg-gradient-to-r from-orange to-orange-2'>
+        2323
+      </nav> */}
+    </>
   );
 };

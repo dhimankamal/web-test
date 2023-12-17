@@ -41,11 +41,16 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <div className='relative flex h-screen flex-col'>
+          <div className='hidden lg:flex relative  h-screen flex-col'>
             <DiscountBar />
             <Navbar />
             <main className='flex-grow'>{children}</main>
             <Footer />
+          </div>
+          <div className='lg:hidden flex justify-center items-center w-full h-screen'>
+            <p className='text-xl font-bold opacity-70'>
+              Responsive is pending
+            </p>
           </div>
         </Providers>
       </body>

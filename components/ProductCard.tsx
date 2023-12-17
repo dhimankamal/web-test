@@ -5,7 +5,7 @@ type Props = {};
 
 export default function ProductCard({}: Props) {
   return (
-    <div className='relative w-full overflow-hidden rounded-2xl shadow'>
+    <div className='relative bg-white w-full overflow-hidden rounded-2xl shadow'>
       <div className='p-4'>
         <div className='relative h-72 w-full'>
           <Image

@@ -27,30 +27,32 @@ const collections = [
 
 export default function ShopByGender() {
   return (
-    <section>
+    <section className='py-8'>
       <SectionHeader
         heading='Shop By Gender'
         subheading='Discover your world of Jewellery.'
       />
-      <div className='container mx-auto px-8 py-12'>
-        <div className='grid grid-cols-4 gap-6'>
-          {collections.map(({ image }, idx) => {
-            return (
-              <div
-                key={idx}
-                className={clsx(
-                  'relative h-96 w-full overflow-hidden rounded-lg'
-                )}
-              >
-                <Image
-                  className=' object-cover object-center'
-                  src={image}
-                  layout='fill'
-                  alt='collection'
-                />
-              </div>
-            );
-          })}
+      <div className='bg-gradient-to-t from-orange-1 to-transparent'>
+        <div className='container mx-auto px-8 py-12'>
+          <div className='grid grid-cols-4 gap-6'>
+            {collections.map(({ image }, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className={clsx(
+                    'relative h-96 w-full overflow-hidden rounded-lg'
+                  )}
+                >
+                  <Image
+                    className=' object-cover object-center'
+                    src={image}
+                    layout='fill'
+                    alt='collection'
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
