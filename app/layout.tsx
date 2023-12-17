@@ -8,6 +8,7 @@ import clsx from 'clsx';
 import { Metadata } from 'next';
 import React from 'react';
 import { Providers } from './providers';
+import React from 'react';
 
 export const metadata: Metadata = {
   title: {
