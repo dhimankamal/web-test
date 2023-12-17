@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 import '@/styles/globals.css';
 import clsx from 'clsx';
 import { Metadata } from 'next';
+import React from 'react';
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
