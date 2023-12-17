@@ -1,11 +1,11 @@
-import { Mulish } from "next/font/google";
+import { Mulish } from 'next/font/google';
 
 export const fontSans = Mulish({
-  subsets: ["latin"],
-  variable: "--font-sans",
+  subsets: ['latin'],
+  variable: '--font-sans',
 });
 
 export const fontMono = Mulish({
-  subsets: ["latin"],
-  variable: "--font-mono",
+  subsets: ['latin'],
+  variable: '--font-mono',
 });

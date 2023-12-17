@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import { Kbd } from '@nextui-org/kbd'
-import { Input } from '@nextui-org/input'
+import { Kbd } from '@nextui-org/kbd';
+import { Input } from '@nextui-org/input';
 
-import NextLink from 'next/link'
+import NextLink from 'next/link';
 
 import {
   CartIcon,
@@ -12,80 +12,80 @@ import {
   OffersIcon,
   ReportIcon,
   SearchIcon,
-  WhislistIcon
-} from '@/components/icons'
+  WhislistIcon,
+} from '@/components/icons';
 
-import { Logo } from '@/components/icons'
-import Link from 'next/link'
-import React from 'react'
+import { Logo } from '@/components/icons';
+import Link from 'next/link';
+import React from 'react';
 
 const list = [
   {
     name: 'OFFERS',
     icon: OffersIcon,
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'CONTACT US',
     icon: ContactIcon,
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'WISHLIST',
     icon: OffersIcon,
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'DELIVERY',
     icon: DeliveryIcon,
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'CART',
     icon: CartIcon,
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'VERIFY REPORT',
     icon: ReportIcon,
-    hrefs: '/'
-  }
-]
+    hrefs: '/',
+  },
+];
 
 const links = [
   {
     name: 'NEW ARRIVAL',
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'RINGS',
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'EARRINGS',
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'PENDANTS',
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'BRACELETS & BANGLES',
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'SOLITIARES',
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'GOLD COINS',
-    hrefs: '/'
+    hrefs: '/',
   },
   {
     name: 'ALL JEWELLERY',
-    hrefs: '/'
-  }
-]
+    hrefs: '/',
+  },
+];
 
 export const Navbar = () => {
   const searchInput = (
@@ -93,7 +93,7 @@ export const Navbar = () => {
       aria-label='Search'
       classNames={{
         inputWrapper: 'bg-default-100',
-        input: 'text-sm'
+        input: 'text-sm',
       }}
       endContent={
         <Kbd className='hidden lg:inline-block' keys={['command']}>
@@ -103,20 +103,20 @@ export const Navbar = () => {
       labelPlacement='outside'
       placeholder='Search...'
       startContent={
-        <SearchIcon className='text-base text-default-400 pointer-events-none flex-shrink-0' />
+        <SearchIcon className='pointer-events-none flex-shrink-0 text-base text-default-400' />
       }
       type='search'
     />
-  )
+  );
 
   return (
     <nav>
       <div className='bg-orange-1'>
-        <div className='container mx-auto flex items-center justify-between py-8 px-4'>
+        <div className='container mx-auto flex items-center justify-between px-4 py-8'>
           <div className=''>
-            <div className='gap-3 max-w-fit'>
+            <div className='max-w-fit gap-3'>
               <NextLink
-                className='flex justify-start items-center gap-1'
+                className='flex items-center justify-start gap-1'
                 href='/'
               >
                 <Logo />
@@ -141,13 +141,13 @@ export const Navbar = () => {
                       <p className='text-sm '>{name}</p>
                     </Link>
                   </li>
-                )
+                );
               })}
             </ul>
           </div>
           <div>
-            <div className='border-b-3 border-orange px-2 pb-2 flex items-start gap-2'>
-              <div className='bg-white w-6 h-6 rounded-full border-gray-300 border-2'></div>
+            <div className='flex items-start gap-2 border-b-3 border-orange px-2 pb-2'>
+              <div className='h-6 w-6 rounded-full border-2 border-gray-300 bg-white'></div>
               <p>Hi, Ashish Sood</p>
             </div>
           </div>
@@ -160,15 +160,17 @@ export const Navbar = () => {
               <li key={idx} className='w-full'>
                 <Link
                   href={hrefs}
-                  className='flex py-4 flex-col items-center gap-2 whitespace-nowrap'
+                  className='flex flex-col items-center gap-2 whitespace-nowrap py-4'
                 >
-                  <p className='text-sm font-semibold hover:text-orange transition-all duration-300'>{name}</p>
+                  <p className='text-sm font-semibold transition-all duration-300 hover:text-orange'>
+                    {name}
+                  </p>
                 </Link>
               </li>
-            )
+            );
           })}
         </ul>
       </div>
     </nav>
-  )
-}
+  );
+};

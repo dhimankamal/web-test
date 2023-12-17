@@ -1,45 +1,49 @@
-import React from 'react'
-import SectionHeader from '../SectionHeader'
-import Image from 'next/image'
-import clsx from 'clsx'
+import React from 'react';
+import SectionHeader from '../SectionHeader';
+import Image from 'next/image';
+import clsx from 'clsx';
 
 const collections = [
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
-  }
-]
+    href: '',
+  },
+];
 
-export default function ShopByCategory () {
+export default function ShopByCategory() {
   return (
     <section>
-      <SectionHeader heading='Shop By Category' subheading='Discover your world of Jewellery.' buttonText='Discover all' />
+      <SectionHeader
+        heading='Shop By Category'
+        subheading='Discover your world of Jewellery.'
+        buttonText='Discover all'
+      />
       <div className='container mx-auto px-8 py-12'>
         <div className='grid grid-cols-4 gap-6'>
           {collections.map(({ image }, idx) => {
@@ -47,7 +51,7 @@ export default function ShopByCategory () {
               <div
                 key={idx}
                 className={clsx(
-                  'h-96 w-full relative rounded-lg overflow-hidden',
+                  'relative h-96 w-full overflow-hidden rounded-lg',
                   { 'col-span-2': idx < 2 }
                 )}
               >
@@ -58,10 +62,10 @@ export default function ShopByCategory () {
                   alt='collection'
                 />
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

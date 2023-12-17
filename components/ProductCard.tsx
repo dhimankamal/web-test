@@ -1,14 +1,14 @@
-import Image from 'next/image'
-import React from 'react'
-import { HeartIcon, ViewSimilarIcon } from './icons'
+import Image from 'next/image';
+import React from 'react';
+import { HeartIcon, ViewSimilarIcon } from './icons';
 
-type Props = {}
+type Props = {};
 
-export default function ProductCard ({}: Props) {
+export default function ProductCard({}: Props) {
   return (
-    <div className='shadow w-full relative rounded-2xl overflow-hidden'>
+    <div className='relative w-full overflow-hidden rounded-2xl shadow'>
       <div className='p-4'>
-        <div className='relative w-full h-72'>
+        <div className='relative h-72 w-full'>
           <Image
             src='/product/1.png'
             className='object-cover object-center'
@@ -25,20 +25,20 @@ export default function ProductCard ({}: Props) {
               </div>
               <p className='text-sm'>Yemeraly Wings Diamond...</p>
             </div>
-            <p className='text-green-1 font-medium text-sm mt-2'>
+            <p className='mt-2 text-sm font-medium text-green-1'>
               10 % on off Making Charges
             </p>
           </div>
           <div>
-            <ul className=' h-full flex justify-between flex-col'>
-              <li className='p-0.5 border w-fit rounded-full'>
-                <div className='w-3 h-3 rounded-full bg-orange'></div>
+            <ul className=' flex h-full flex-col justify-between'>
+              <li className='w-fit rounded-full border p-0.5'>
+                <div className='h-3 w-3 rounded-full bg-orange'></div>
               </li>
-              <li className='p-0.5 border w-fit rounded-full'>
-                <div className='w-3 h-3 rounded-full bg-orange'></div>
+              <li className='w-fit rounded-full border p-0.5'>
+                <div className='h-3 w-3 rounded-full bg-orange'></div>
               </li>
-              <li className='p-0.5 border w-fit rounded-full'>
-                <div className='w-3 h-3 rounded-full bg-orange'></div>
+              <li className='w-fit rounded-full border p-0.5'>
+                <div className='h-3 w-3 rounded-full bg-orange'></div>
               </li>
             </ul>
           </div>
@@ -46,21 +46,21 @@ export default function ProductCard ({}: Props) {
       </div>
 
       <div className='flex justify-between'>
-        <button className='w-full text-sm flex items-center gap-2 justify-center'>
+        <button className='flex w-full items-center justify-center gap-2 text-sm'>
           <ViewSimilarIcon />
           <span>View Similar </span>
         </button>
         <button
           className={
-            "bg-[url('/buynow.png')] bg-no-repeat bg-cover text-white text-sm w-full py-3"
+            "w-full bg-[url('/buynow.png')] bg-cover bg-no-repeat py-3 text-sm text-white"
           }
         >
           Buy now
         </button>
       </div>
 
-      <div className='absolute top-0 p-6 w-full flex  items-center justify-between'>
-        <button className='bg-orange px-6 py-2 rounded-full text-sm'>
+      <div className='absolute top-0 flex w-full items-center  justify-between p-6'>
+        <button className='rounded-full bg-orange px-6 py-2 text-sm'>
           Trending
         </button>
         <button>
@@ -68,5 +68,5 @@ export default function ProductCard ({}: Props) {
         </button>
       </div>
     </div>
-  )
+  );
 }

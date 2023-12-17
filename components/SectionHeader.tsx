@@ -1,31 +1,31 @@
-import React from 'react'
+import React from 'react';
 
 type Props = {
-  heading: string
-  subheading: string
-  onClick?: () => void
-  buttonText?: string
-}
+  heading: string;
+  subheading: string;
+  onClick?: () => void;
+  buttonText?: string;
+};
 
-export default function SectionHeader ({
+export default function SectionHeader({
   heading,
   subheading,
   onClick,
-  buttonText
+  buttonText,
 }: Props) {
   return (
-    <div className='flex items-center gap-8 container mx-auto px-4'>
+    <div className='container mx-auto flex items-center gap-8 px-4'>
       <div>
-        <h2 className='text-orange font-bold text-xl'>{heading}</h2>
+        <h2 className='text-xl font-bold text-orange'>{heading}</h2>
         <span className='text-sm'>{subheading}</span>
       </div>
-      <div className='flex-grow h-0.5 bg-grey-3'></div>
+      <div className='h-0.5 flex-grow bg-grey-3'></div>
       {!!buttonText && (
         <button
           onClick={onClick}
-          className='py-3 px-6 rounded-md bg-orange text-white'
+          className='rounded-md bg-orange px-6 py-3 text-white'
         >{`${buttonText} >> `}</button>
       )}
     </div>
-  )
+  );
 }

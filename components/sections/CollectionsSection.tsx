@@ -1,43 +1,43 @@
-'use client'
+'use client';
 
-import React from 'react'
-import SectionHeader from '../SectionHeader'
-import Image from 'next/image'
+import React from 'react';
+import SectionHeader from '../SectionHeader';
+import Image from 'next/image';
 
 const collections = [
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
+    href: '',
   },
   {
     image: '/collection.png',
     id: 1,
-    href: ''
-  }
-]
+    href: '',
+  },
+];
 
-export default function CollectionsSection () {
+export default function CollectionsSection() {
   return (
     <section>
       <SectionHeader
@@ -52,7 +52,7 @@ export default function CollectionsSection () {
             return (
               <div
                 key={idx}
-                className='h-72 w-full relative rounded-lg overflow-hidden'
+                className='relative h-72 w-full overflow-hidden rounded-lg'
               >
                 <Image
                   className=' object-cover object-center'
@@ -61,10 +61,10 @@ export default function CollectionsSection () {
                   alt='collection'
                 />
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }
