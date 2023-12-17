@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { IconSvgProps } from '@/types';
+import * as React from 'react';
 
 export const FooterIcon: React.FC<IconSvgProps> = ({
   size = 11,

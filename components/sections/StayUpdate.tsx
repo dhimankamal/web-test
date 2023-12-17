@@ -1,6 +1,4 @@
-import React from 'react';
 import SectionHeader from '../SectionHeader';
-import Image from 'next/image';
 
 const list = [
   {

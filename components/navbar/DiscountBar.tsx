@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 import { LoactionIcon } from '../icons';
 
 export default function DiscountBar() {

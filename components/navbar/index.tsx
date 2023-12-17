@@ -1,7 +1,7 @@
 'use client';
 
-import { Kbd } from '@nextui-org/kbd';
 import { Input } from '@nextui-org/input';
+import { Kbd } from '@nextui-org/kbd';
 
 import NextLink from 'next/link';
 
@@ -12,7 +12,6 @@ import {
   OffersIcon,
   ReportIcon,
   SearchIcon,
-  WhislistIcon,
 } from '@/components/icons';
 
 import { Logo } from '@/components/icons';

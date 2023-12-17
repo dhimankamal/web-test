@@ -1,4 +1,3 @@
-import React from 'react';
 import { PlayIcon } from '../icons';
 
 export default function VideoSection() {

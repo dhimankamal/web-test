@@ -109,9 +109,12 @@ devDependencies:
   prettier:
     specifier: ^3.0
     version: 3.1.1
+  prettier-plugin-organize-imports:
+    specifier: ^3.2.4
+    version: 3.2.4(prettier@3.1.1)(typescript@5.0.4)
   prettier-plugin-tailwindcss:
     specifier: ^0.5.9
-    version: 0.5.9(prettier@3.1.1)
+    version: 0.5.9(prettier-plugin-organize-imports@3.2.4)(prettier@3.1.1)
 
 packages:
   /@aashutoshrathi/word-wrap@1.2.6:
@@ -4155,7 +4158,27 @@ packages:
       }
     engines: { node: '>= 0.8.0' }
 
-  /prettier-plugin-tailwindcss@0.5.9(prettier@3.1.1):
+  /prettier-plugin-organize-imports@3.2.4(prettier@3.1.1)(typescript@5.0.4):
+    resolution:
+      {
+        integrity: sha512-6m8WBhIp0dfwu0SkgfOxJqh+HpdyfqSSLfKKRZSFbDuEQXDDndb8fTpRWkUrX/uBenkex3MgnVk0J3b3Y5byog==,
+      }
+    peerDependencies:
+      '@volar/vue-language-plugin-pug': ^1.0.4
+      '@volar/vue-typescript': ^1.0.4
+      prettier: '>=2.0'
+      typescript: '>=2.9'
+    peerDependenciesMeta:
+      '@volar/vue-language-plugin-pug':
+        optional: true
+      '@volar/vue-typescript':
+        optional: true
+    dependencies:
+      prettier: 3.1.1
+      typescript: 5.0.4
+    dev: true
+
+  /prettier-plugin-tailwindcss@0.5.9(prettier-plugin-organize-imports@3.2.4)(prettier@3.1.1):
     resolution:
       {
         integrity: sha512-9x3t1s2Cjbut2QiP+O0mDqV3gLXTe2CgRlQDgucopVkUdw26sQi53p/q4qvGxMLBDfk/dcTV57Aa/zYwz9l8Ew==,
@@ -4208,6 +4231,7 @@ packages:
         optional: true
     dependencies:
       prettier: 3.1.1
+      prettier-plugin-organize-imports: 3.2.4(prettier@3.1.1)(typescript@5.0.4)
     dev: true
 
   /prettier@3.1.1:
@@ -4983,7 +5007,6 @@ packages:
       }
     engines: { node: '>=12.20' }
     hasBin: true
-    dev: false
 
   /unbox-primitive@1.0.2:
     resolution:

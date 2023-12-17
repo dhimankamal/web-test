@@ -1,13 +1,12 @@
-import '@/styles/globals.css';
-import { Metadata } from 'next';
-import { siteConfig } from '@/config/site';
-import { fontSans } from '@/config/fonts';
-import { Providers } from './providers';
-import { Navbar } from '@/components/navbar';
-import { Link } from '@nextui-org/link';
-import clsx from 'clsx';
-import DiscountBar from '@/components/navbar/DiscountBar';
 import Footer from '@/components/Footer';
+import { Navbar } from '@/components/navbar';
+import DiscountBar from '@/components/navbar/DiscountBar';
+import { fontSans } from '@/config/fonts';
+import { siteConfig } from '@/config/site';
+import '@/styles/globals.css';
+import clsx from 'clsx';
+import { Metadata } from 'next';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: {

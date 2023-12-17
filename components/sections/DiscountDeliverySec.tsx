@@ -1,4 +1,3 @@
-import React from 'react';
 import { DiscountTagIcon, DottedArrowRIcon, TruckIcon } from '../icons';
 
 export default function DiscountDeliverySec() {

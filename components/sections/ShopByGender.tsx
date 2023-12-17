@@ -1,7 +1,6 @@
-import React from 'react';
-import SectionHeader from '../SectionHeader';
 import clsx from 'clsx';
 import Image from 'next/image';
+import SectionHeader from '../SectionHeader';
 
 const collections = [
   {

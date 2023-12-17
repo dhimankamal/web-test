@@ -1,6 +1,5 @@
-import React from 'react';
-import SectionHeader from '../SectionHeader';
 import ProductCard from '../ProductCard';
+import SectionHeader from '../SectionHeader';
 
 let productList = [
   {

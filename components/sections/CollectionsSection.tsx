@@ -1,8 +1,7 @@
 'use client';
 
-import React from 'react';
-import SectionHeader from '../SectionHeader';
 import Image from 'next/image';
+import SectionHeader from '../SectionHeader';
 
 const collections = [
   {
