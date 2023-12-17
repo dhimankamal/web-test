@@ -14,7 +14,7 @@ module.exports = {
         orange: {
           DEFAULT: '#F77433',
           1: '#F9E7C473',
-          2:"#FEAF38"
+          2: '#FEAF38',
         },
         grey: {
           1: '#413E3E',

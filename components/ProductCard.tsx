@@ -69,5 +69,3 @@ export default function ProductCard({}: Props) {
     </div>
   );
 }
-
-
