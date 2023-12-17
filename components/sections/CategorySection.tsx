@@ -76,7 +76,8 @@ export default function CategorySection() {
             return (
               <div key={idx}>
                 <div className='flex flex-col items-center justify-center gap-2'>
-                  <div className='relative h-32 w-32 rounded-full border-4 border-orange'>
+                  <div className='bg-gradient-to-r from-orange to-orange-2 p-1 rounded-full'>
+                  <div className='relative h-32 w-32 rounded-full bg-white'>
                     <Image
                       src='/category.png'
                       layout='fill'
@@ -84,8 +85,10 @@ export default function CategorySection() {
                       alt='category-image'
                     />
                   </div>
+                  </div>
+                 
                   <p>{name}</p>
-                  <div className='h-1 w-10 rounded-full bg-orange'></div>
+                  <div className='h-1 w-10 rounded-full bg-gradient-to-r from-orange to-orange-2'></div>
                 </div>
               </div>
             );

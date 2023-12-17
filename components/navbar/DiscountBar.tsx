@@ -3,7 +3,7 @@ import { LoactionIcon } from '../icons';
 
 export default function DiscountBar() {
   return (
-    <div className='relative bg-orange py-1.5'>
+    <div className='relative bg-gradient-to-r from-orange to-orange-2 py-1.5'>
       <p className='text-center text-xs text-grey-1'>
         Refer and earn extra discount{' '}
         <Link href='/' className='text-purple-1'>

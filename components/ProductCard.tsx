@@ -59,7 +59,7 @@ export default function ProductCard({}: Props) {
       </div>
 
       <div className='absolute top-0 flex w-full items-center  justify-between p-6'>
-        <button className='rounded-full bg-orange px-6 py-2 text-sm'>
+        <button className='rounded-full bg-gradient-to-br from-[#dceff6] to-[#fce3e2] px-6 py-2 text-sm'>
           Trending
         </button>
         <button>
@@ -69,3 +69,5 @@ export default function ProductCard({}: Props) {
     </div>
   );
 }
+
+

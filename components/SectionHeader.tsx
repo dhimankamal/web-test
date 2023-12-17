@@ -21,7 +21,7 @@ export default function SectionHeader({
       {!!buttonText && (
         <button
           onClick={onClick}
-          className='rounded-md bg-orange px-6 py-3 text-white'
+          className='rounded-md  bg-gradient-to-r from-orange to-orange-2 px-6 py-3 text-white'
         >{`${buttonText} >> `}</button>
       )}
     </div>
