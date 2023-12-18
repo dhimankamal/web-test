@@ -3,6 +3,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -25,6 +26,7 @@ const list = [
 
 export default function CustomerReviews() {
   const [active, setActiove] = useState(0);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const afterChange = (id: number) => {
     setActiove(id);
@@ -35,7 +37,7 @@ export default function CustomerReviews() {
     centerMode: true,
     infinite: true,
     centerPadding: '60px',
-    slidesToShow: 3,
+    slidesToShow: isMobile ? 1 : 3,
     speed: 500,
     afterChange: afterChange,
   };

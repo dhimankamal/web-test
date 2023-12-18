@@ -23,7 +23,7 @@ export default function StayUpdate() {
         subheading='Discover your world of Jewellery.'
         buttonText='Discover all'
       />
-      <div className='container mx-auto flex gap-4 py-10'>
+      <div className='container mx-auto grid px-2 lg:flex gap-4 py-10'>
         {list.map(({ name }, idx) => {
           return (
             <div

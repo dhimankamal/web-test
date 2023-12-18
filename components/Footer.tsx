@@ -88,7 +88,7 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer className='bg-orange-1'>
-      <div className='container mx-auto grid grid-cols-5 gap-2 px-2 py-10'>
+      <div className='container mx-auto grid lg:grid-cols-5 gap-2 px-2 py-10'>
         {footerLinks.map(({ heading, links }, idx) => {
           return (
             <div key={idx} className='border-r border-orange-2 p-4'>

@@ -32,7 +32,7 @@ export default function HeroSection() {
       <Slider {...settings}>
         {list.map(({ image }, idx) => {
           return (
-            <div key={idx} className='relative h-[40rem] w-full'>
+            <div key={idx} className='relative h-72 lg:h-[40rem] w-full'>
               <Image
                 src={image}
                 className='object-cover object-center'

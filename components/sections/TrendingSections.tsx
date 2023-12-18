@@ -1,3 +1,7 @@
+'use client';
+
+import { useMediaQuery } from 'react-responsive';
+import Slider, { Settings } from 'react-slick';
 import ProductCard from '../ProductCard';
 import SectionHeader from '../SectionHeader';
 
@@ -17,9 +21,32 @@ let productList = [
   {
     name: 'Yemeraly Wings Diamond...',
   },
+  {
+    name: 'Yemeraly Wings Diamond...',
+  },
+  {
+    name: 'Yemeraly Wings Diamond...',
+  },
+  {
+    name: 'Yemeraly Wings Diamond...',
+  },
+  {
+    name: 'Yemeraly Wings Diamond...',
+  },
 ];
 
 export default function TrendingSections() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  const settings: Settings = {
+    className: 'center',
+    infinite: true,
+    centerPadding: '600px',
+    slidesToShow: isMobile ? 1 : 5,
+    speed: 500,
+    autoplay: true,
+    dots: true,
+  };
   return (
     <section>
       <SectionHeader
@@ -28,12 +55,16 @@ export default function TrendingSections() {
         buttonText='Discover all'
       />
       <div className='bg-gradient-to-t from-orange-1 to-transparent'>
-        <div className='container mx-auto px-8 py-12'>
-          <div className='grid grid-cols-5 gap-6'>
+        <div className='w-full overflow-hidden py-10'>
+          <Slider {...settings}>
             {productList.map(({ name }, idx) => {
-              return <ProductCard key={idx} />;
+              return (
+                <div key={idx} className='px-8'>
+                  <ProductCard />{' '}
+                </div>
+              );
             })}
-          </div>
+          </Slider>
         </div>
       </div>
     </section>

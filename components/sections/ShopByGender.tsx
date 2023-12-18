@@ -34,7 +34,7 @@ export default function ShopByGender() {
       />
       <div className='bg-gradient-to-t from-orange-1 to-transparent'>
         <div className='container mx-auto px-8 py-12'>
-          <div className='grid grid-cols-4 gap-6'>
+          <div className='grid lg:grid-cols-4 gap-6'>
             {collections.map(({ image }, idx) => {
               return (
                 <div

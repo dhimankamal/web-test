@@ -3,7 +3,7 @@ import { Input } from '@nextui-org/input';
 
 export default function SignUpSection() {
   return (
-    <section className='container mx-auto flex items-center justify-between py-10'>
+    <section className='container mx-auto flex flex-col lg:flex-row px-4 gap-4 items-center justify-between py-10'>
       <div className='w-full'>
         <h2 className='text-xl text-orange'>
           SIGN UP TO BE A GARNET LANEE INSIDER{' '}
