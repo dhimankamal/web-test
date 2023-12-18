@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import { useMediaQuery } from 'react-responsive';
 import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import { useMediaQuery } from 'react-responsive'
 
 const list = [
   {
@@ -60,14 +60,13 @@ const list = [
 ];
 
 export default function CategorySection() {
-
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const settings: Settings = {
     className: 'center',
     infinite: true,
     centerPadding: '0px',
-    slidesToShow:isMobile? 2:8,
+    slidesToShow: isMobile ? 2 : 8,
     speed: 500,
     autoplay: true,
     dots: true,

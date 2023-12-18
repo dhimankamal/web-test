@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useMediaQuery } from 'react-responsive';
 import Slider, { Settings } from 'react-slick';
 import ProductCard from '../ProductCard';
